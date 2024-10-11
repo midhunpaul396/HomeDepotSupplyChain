@@ -2,6 +2,8 @@ let listBg = document.querySelectorAll('.bg');
 let listTab = document.querySelectorAll('.tab');
 let titleBanner = document.querySelector('.banner h1');
 window.addEventListener("scroll", (event) => {
+    console.log("HII");
+
     /*scrollY is the web scrollbar position (pixel)*/
     let top = this.scrollY;
     /*index is the order of classes bg (0,1,2,3,4,5,6,7,8)
@@ -30,3 +32,10 @@ window.addEventListener("scroll", (event) => {
         }
     })
 });  
+document.getElementById('mobileNav').addEventListener('change', function() {
+    console.log("HII");
+    var selectedValue = this.value;
+    if (selectedValue) {
+        window.location.href = selectedValue;
+    }
+});
